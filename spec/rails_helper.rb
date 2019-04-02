@@ -49,7 +49,7 @@ RSpec.configure do |config|
 
   config.use_transactional_fixtures = false
 
-  options = { js_errors: false, extensions: ["spec/support/polyfill.min.js"] }
+  options = { js_errors: false, extensions: ["spec/support/weakmap-polyfill.min.js"] }
   Capybara.register_driver :poltergeist do |app|
     Capybara::Poltergeist::Driver.new(app, options)
   end
